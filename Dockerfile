@@ -14,4 +14,4 @@ RUN grunt prod
 
 CMD npm start --production
 
-EXPOSE 4567
+EXPOSE 2368
