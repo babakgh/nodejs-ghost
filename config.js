@@ -11,22 +11,22 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://fox.dl-app-ghost.c66.me',
+        url: process.env.URL,
         mail: {},
         database: {
             client: 'pg',
             connection: {
                 host     : 'postgresql.cloud66.local',
-                user     : 'uq12q4',
-                password : 'wsvkr22ZyE2GXge',
-                database : 'dl_app_ghost_production',
+                user     : process.env.POSTGRESQL_USERNAME,
+                password : process.env.POSTGRESQL_PASSWORD,
+                database : process.env.POSTGRESQL_DATABASE,
                 charset  : 'utf8'
             }
         },
 
         server: {
             host: '0.0.0.0',
-            port: '2368'
+            port: process.env.PORT
         }
     },
 
